@@ -1,7 +1,8 @@
 # deliver_importmaps
 
-This is a tool for generating an import map for loading JavaScript modules straight
-from the source inside of npm packages, delivered by the [jsDelivr CDN][jsd].
+This is a tool for generating an import map for loading JavaScript modules
+straight from the source inside of npm packages, delivered by the
+[jsDelivr CDN][jsd].
 
 ## Source
 
@@ -15,7 +16,8 @@ MIT
 ## TODO
 
 - Get `package.json` from jsDelivr CDN for packages
-- Recursively get dependencies, with `version`, `module` and `types` from `package.json`
+- Recursively get dependencies, with `version`, `module` and `types` from
+  `package.json`
 - Generate imports for import maps
 - Provide a script for running it from the command line
 - Provide directions for using it programatically
