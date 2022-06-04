@@ -3,7 +3,6 @@ import { assertEquals } from "https://deno.land/std@0.133.0/testing/asserts.ts";
 
 Deno.test("with dependencies", async () => {
   const packages = await getDependencies({ "@codemirror/state": "0.19.9" });
-  console.log({ packages });
   assertEquals(Object.keys(packages).length, 2);
 });
 
