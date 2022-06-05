@@ -28,6 +28,8 @@ Deno.test("generate import map", () => {
 
 Deno.test("generate typed endpoints", () => {
   const text = generateTypedImports(packages);
-  assert(/deno-types.*text.*"/.exec(text)[0].endsWith("dist/index.d.ts\""));
-  assert(/deno-types.*state.*"/.exec(text)[0].endsWith("dist/index.d.ts\""));
+  const match1 = /deno-types.*text.*"/.exec(text);
+  assert(match1 && match1[0].endsWith("dist/index.d.ts\""));
+  const match2 = /deno-types.*state.*"/.exec(text);
+  assert(match2 && match2[0].endsWith("dist/index.d.ts\""));
 });

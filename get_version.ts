@@ -20,7 +20,7 @@ export async function getVersion(
   const urlName = splitPackageName(name).map((s) => encodeURI(s)).join("/");
   const urlVersionRange = encodeURI(versionRange);
   const url = `${baseUrl}/package/resolve/npm/${urlName}@${urlVersionRange}`;
-  const resp = await fetch(url);
+  const resp = await fetch(url, {headers});
   if (resp.ok) {
     const respBody = await resp.json() as { version: string };
     const version = respBody.version;
